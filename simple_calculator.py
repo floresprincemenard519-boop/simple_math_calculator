@@ -1,0 +1,1 @@
+operation = input("Welcome! I'm a simple calculator.\n" + "-" * 50 + "\nEnter operation (+, -, *, /): ")
