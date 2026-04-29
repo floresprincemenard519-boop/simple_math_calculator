@@ -1,4 +1,12 @@
-from basic_calculator import BasicCalculator
+from basic_calculator import Calculator
 
 class PremiumCalculator(BasicCalculator):
-    pass
+    def __init__(self):
+        super().__init__()
+
+    def power(self, a, b):
+        return a ** b
+    
+    def square_root(self, a):
+        return a ** 0.5
+    
