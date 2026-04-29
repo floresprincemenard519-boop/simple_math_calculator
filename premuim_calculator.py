@@ -1,6 +1,6 @@
 from basic_calculator import Calculator
 
-class PremiumCalculator(BasicCalculator):
+class PremiumCalculator(Calculator):
     def __init__(self, first_number, second_number, operation):
         super().__init__(first_number, second_number, operation)
 
