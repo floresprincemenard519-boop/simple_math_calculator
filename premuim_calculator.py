@@ -9,3 +9,6 @@ class PremiumCalculator(BasicCalculator):
 
     def square_root(self, number):
         return number ** 0.5
+    
+    def remainder(self, first_number, second_number):
+        return first_number % second_number
