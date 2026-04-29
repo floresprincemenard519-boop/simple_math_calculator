@@ -10,3 +10,9 @@ class Calculator:
     def subtraction(self):
         return self.first_number - self.second_number
     
+    def multiplication(self):
+        return self.first_number * self.second_number
+    
+    def division(self):
+        return self.first_number / self.second_number 
+        
