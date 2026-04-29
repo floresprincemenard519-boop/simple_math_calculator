@@ -4,3 +4,7 @@ class Calculator:
         self.second_number = second_number
         self.operation = operation
     
+    def addition(self):
+        return self.first_number + self.second_number
+    
+    
