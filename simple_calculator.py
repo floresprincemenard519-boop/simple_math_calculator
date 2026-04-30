@@ -4,6 +4,8 @@ def math_problem_txt_reader(file_name):
     pass
     # read file with format: first_number, second_number, operation
     # example: 5, 3, +
+    # for each line, perform the operation and write the result to a new file called results.txt
+    # example: 5 + 3 = 8
 
 
 def number_checker(number):
