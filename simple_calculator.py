@@ -111,7 +111,7 @@ Enter your choice (1-10): """)
                 result = calculator.remainder()
                 print(f"The remainder of {first_number} / {second_number} is: {result}")
             elif operation == "8":
-                result = calculator.radical(first_number, second_number)
+                result = calculator.radical()
                 print(f"The result of √{first_number} (with index {second_number}) is: {result}")
             
         elif operation == "10":

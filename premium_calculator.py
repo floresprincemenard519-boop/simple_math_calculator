@@ -5,8 +5,7 @@ class PremiumCalculator(Calculator):
         self.first_number = first_number
         self.second_number = second_number
         self.operation = operation
-        super().__init__(first_number, second_number, operation)
-
+        
     def power(self):
         return self.first_number ** self.second_number
 
