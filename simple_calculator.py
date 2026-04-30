@@ -7,12 +7,12 @@ second_number = float(input("Enter second number: "))
 calculator = PremiumCalculator(first_number, second_number, operation)
 
 if operation == "+":
-    print(calculator.addition())
+    print(f"The result is: {calculator.addition()}")
 elif operation == "-":
-    print(calculator.subtraction())
+    print(f"The result is: {calculator.subtraction()}")
 elif operation == "*":
-    print(calculator.multiplication())
+    print(f"The result is: {calculator.multiplication()}")
 elif operation == "/":
-    print(calculator.division())
+    print(f"The result is: {calculator.division()}")
 else:
     print("Invalid operation!")
