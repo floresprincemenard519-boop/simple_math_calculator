@@ -15,10 +15,13 @@ def run_calculator():
 { "-" * 50 }""")
 
     while True:
-        choice = input("Enter your choice (1-8): ")
+        operation = input("Enter your choice (1-8): ")
 
-        if choice == "8":
+        if operation == "8":
             print("Thank you for using me! Goodbye!")
             break
+
+        if operation in ["1", "2", "3", "4", "5", "7"]:
+            pass
 
 run_calculator()
