@@ -47,11 +47,11 @@ def math_problem_txt_reader(file_name):
                 result = calculator.remainder()
                 results_file.write(f"{first_number} % {second_number} = {result}\n")
             elif operation.strip() == "8":
-                result = calculator.radical(first_number, second_number)
+                result = calculator.radical()
                 results_file.write(f"√{first_number} (with index {second_number}) = {result}\n")
             else:
                 print(f"Unsupported operation number in line: {line}. Skipping.")
-                
+
         print("Math problems processed. Results saved to results.txt.")
 
 def number_checker(number):
