@@ -55,10 +55,10 @@ def run_calculator():
                 print(f"The result of {first_number} ** {second_number} is: {result}")
             elif operation == "7":
                 result = calculator.remainder()
-                print(f"The result of {first_number} % {second_number} is: {result}")
+                print(f"The remainder of {first_number} / {second_number} is: {result}")
             elif operation == "8":
                 result = calculator.radical(first_number, second_number)
-                print(f"The result of √{second_number} is: {result}")
+                print(f"The result of √{first_number} (with index {second_number}) is: {result}")
 
         elif operation == "6":
             number = number_checker(input("Enter the number: "))
