@@ -84,7 +84,7 @@ Enter your choice (1-10): """)
             print("Thank you for using me! Goodbye!")
             break
 
-        if operation in ["1", "2", "3", "4", "5", "7", "8", "10"]:
+        if operation in ["1", "2", "3", "4", "5", "7", "8"]:
             first_number = number_checker(input("Enter the first number: "))
             if first_number is None:
                 continue
@@ -114,7 +114,8 @@ Enter your choice (1-10): """)
             elif operation == "8":
                 result = calculator.radical(first_number, second_number)
                 print(f"The result of √{first_number} (with index {second_number}) is: {result}")
-            elif operation == "10":
+            
+        elif operation == "10":
                 file_name = input("Enter the file name (with .txt extension only): ")
                 if not file_name.endswith(".txt"):
                     print("Invalid file name. Please enter a valid .txt file.")
