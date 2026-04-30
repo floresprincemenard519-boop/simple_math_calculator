@@ -1,7 +1,56 @@
 from premuim_calculator import PremiumCalculator
 
 def math_problem_txt_reader(file_name):
-    pass
+    with open("file_name", "r") as file, \
+        open("results.txt", "w") as results_file:
+        
+        for line in file:
+            line = line.strip()
+
+            if not line:
+                continue
+
+            parts = line.split(",")
+
+            if len(parts) != 3:
+                print(f"Invalid format in line: {line}. Expected format: first_number, second_number, operation number. Skipping.")
+                continue 
+
+            first_number_str, second_number_str, operation = parts
+
+            first_number = number_checker(first_number_str)
+            if first_number is None:
+                continue
+
+            second_number = number_checker(second_number_str)
+            if second_number is None:
+                continue
+
+            calculator = PremiumCalculator(first_number, second_number, operation)
+
+            if operation.strip() == "1":
+                result = calculator.addition()
+                print(f"{first_number} + {second_number} = {result}")
+            elif operation.strip() == "2":
+                result = calculator.subtraction()
+                print(f"{first_number} - {second_number} = {result}")
+            elif operation.strip() == "3":
+                result = calculator.multiplication()
+                print(f"{first_number} * {second_number} = {result}")
+            elif operation.strip() == "4":
+                result = calculator.division()
+                print(f"{first_number} / {second_number} = {result}")
+            elif operation.strip() == "5":
+                result = calculator.power()
+                print(f"{first_number} ** {second_number} = {result}")
+            elif operation.strip() == "7":
+                result = calculator.remainder()
+                print(f"{first_number} % {second_number} = {result}")
+            elif operation.strip() == "8":
+                result = calculator.radical(first_number, second_number)
+                print(f"√{first_number} (with index {second_number}) = {result}")
+            else:
+                print(f"Unsupported operation '{operation.strip()}' in line: {line}. Skipping.")
     # read file with format: first_number, second_number, operation
     # example: 5, 3, +
     # for each line, perform the operation and write the result to a new file called results.txt
