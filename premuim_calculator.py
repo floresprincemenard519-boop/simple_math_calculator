@@ -2,6 +2,9 @@ from basic_calculator import Calculator
 
 class PremiumCalculator(Calculator):
     def __init__(self, first_number, second_number, operation):
+        self.first_number = first_number
+        self.second_number = second_number
+        self.operation = operation
         super().__init__(first_number, second_number, operation)
 
     def power(self, first_number, second_number):

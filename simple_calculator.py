@@ -51,7 +51,7 @@ def math_problem_txt_reader(file_name):
                 results_file.write(f"√{first_number} (with index {second_number}) = {result}\n")
             else:
                 print(f"Unsupported operation number in line: {line}. Skipping.")
-        
+                
         print("Math problems processed. Results saved to results.txt.")
 
 def number_checker(number):
@@ -119,7 +119,8 @@ Enter your choice (1-10): """)
                 if not file_name.endswith(".txt"):
                     print("Invalid file name. Please enter a valid .txt file.")
                     continue
-                math_problem_txt_reader(file_name)
+                else:
+                    math_problem_txt_reader(file_name)
 
         elif operation == "6":
             number = number_checker(input("Enter the number: "))
