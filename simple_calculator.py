@@ -8,7 +8,8 @@ def number_checker(number):
         return None
 
 def run_calculator():
-    print(f"""Welcome! I'm a simple calculator. 
+    while True:
+        operation = input(f"""Welcome! I'm a simple calculator. 
 { "-" * 50 }
     Choose an operation:
     1. Addition (+)
@@ -20,10 +21,9 @@ def run_calculator():
     7. Remainder (%)
     8. Radical (√)
     9. Exit
-{ "-" * 50 }""")
-
-    while True:
-        operation = input("Enter your choice (1-9): ")
+{ "-" * 50 }
+Enter your choice (1-9): """)
+        
 
         if operation == "9":
             print("Thank you for using me! Goodbye!")
