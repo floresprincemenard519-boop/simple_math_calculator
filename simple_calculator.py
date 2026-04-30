@@ -48,7 +48,7 @@ def math_problem_txt_reader(file_name):
                 results_file.write(f"{first_number} % {second_number} = {result}\n")
             elif operation.strip() == "8":
                 result = calculator.radical()
-                results_file.write(f"√{first_number} (with index {second_number}) = {result}\n")
+                results_file.write(f"The radical of {first_number} (with index {second_number}) = {result}\n")
             else:
                 print(f"Unsupported operation number in line: {line}. Skipping.")
 
