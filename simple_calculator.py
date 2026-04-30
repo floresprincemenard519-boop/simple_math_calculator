@@ -1,4 +1,4 @@
-from premuim_calculator import PremiumCalculator
+from premium_calculator import PremiumCalculator
 
 def math_problem_txt_reader(file_name):
     with open(file_name, "r") as file, \
