@@ -1,5 +1,11 @@
 from premuim_calculator import PremiumCalculator
 
+def math_problem_txt_reader(file_name):
+    pass
+    # read file with format: first_number, second_number, operation
+    # example: 5, 3, +
+
+
 def number_checker(number):
     try:
         return float(number)
@@ -61,7 +67,11 @@ Enter your choice (1-9): """)
                 result = calculator.radical(first_number, second_number)
                 print(f"The result of √{first_number} (with index {second_number}) is: {result}")
             elif operation == "10":
-                print("This feature is still in development. Please check back later.")
+                file_name = input("Enter the file name (with .txt extension only): ")
+                if not file_name.endswith(".txt"):
+                    print("Invalid file name. Please enter a valid .txt file.")
+                    continue
+                math_problem_txt_reader(file_name)
 
         elif operation == "6":
             number = number_checker(input("Enter the number: "))
