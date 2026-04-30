@@ -18,17 +18,18 @@ def run_calculator():
     5. Power (**)
     6. Square Root (sqrt)
     7. Remainder (%)
-    8. Exit
+    8. Radical (√)
+    9. Exit
 { "-" * 50 }""")
 
     while True:
-        operation = input("Enter your choice (1-8): ")
+        operation = input("Enter your choice (1-9): ")
 
-        if operation == "8":
+        if operation == "9":
             print("Thank you for using me! Goodbye!")
             break
 
-        if operation in ["1", "2", "3", "4", "5", "7"]:
+        if operation in ["1", "2", "3", "4", "5", "7", "8"]:
             first_number = number_checker(input("Enter the first number: "))
             if first_number is None:
                 continue
@@ -55,7 +56,10 @@ def run_calculator():
             elif operation == "7":
                 result = calculator.remainder()
                 print(f"The result of {first_number} % {second_number} is: {result}")
-        
+            elif operation == "8":
+                result = calculator.radical(first_number, second_number)
+                print(f"The result of √{second_number} is: {result}")
+
         elif operation == "6":
             number = number_checker(input("Enter the number: "))
             if number is None:
