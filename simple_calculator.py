@@ -21,6 +21,7 @@ def run_calculator():
     7. Remainder (%)
     8. Radical (√)
     9. Exit
+    10. Math problem txt reader (experimental)
 { "-" * 50 }
 Enter your choice (1-9): """)
         
@@ -59,6 +60,8 @@ Enter your choice (1-9): """)
             elif operation == "8":
                 result = calculator.radical(first_number, second_number)
                 print(f"The result of √{first_number} (with index {second_number}) is: {result}")
+            elif operation == "10":
+                print("This feature is still in development. Please check back later.")
 
         elif operation == "6":
             number = number_checker(input("Enter the number: "))
@@ -73,3 +76,4 @@ Enter your choice (1-9): """)
 
 if __name__ == "__main__":
     run_calculator()
+
