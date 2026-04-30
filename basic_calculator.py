@@ -14,5 +14,7 @@ class Calculator:
         return self.first_number * self.second_number
     
     def division(self):
+        if self.second_number == 0:
+            return "Error: Division by zero is not allowed."
         return self.first_number / self.second_number 
         
