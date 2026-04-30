@@ -71,20 +71,20 @@ def run_calculator():
     try:    
         while True:
             operation = input(f"""Welcome! I'm a simple calculator. 
-    { "-" * 50 }
-        Choose an operation:
-        1. Addition (+)
-        2. Subtraction (-)
-        3. Multiplication (*)
-        4. Division (/)
-        5. Power (**)
-        6. Square Root (sqrt)
-        7. Remainder (%)
-        8. Radical (√)
-        9. Exit
-        10. Math problem txt reader (experimental)
-    { "-" * 50 }
-    Enter your choice (1-10): """)
+{ "-" * 50 }
+    Choose an operation:
+    1. Addition (+)
+    2. Subtraction (-)
+    3. Multiplication (*)
+    4. Division (/)
+    5. Power (**)
+    6. Square Root (sqrt)
+    7. Remainder (%)
+    8. Radical (√)
+    9. Exit
+    10. Math problem txt reader (experimental)
+{ "-" * 50 }
+Enter your choice (1-10): """)
             
             if operation == "9":
                 print("Thank you for using me! Goodbye!")
@@ -103,26 +103,26 @@ def run_calculator():
 
                 if operation == "1":
                     result = calculator.addition()
-                    print(f"The result of {first_number} + {second_number} is: {result}")
+                    print(f"\nThe result of {first_number} + {second_number} is: {result}")
                 elif operation == "2":
                     result = calculator.subtraction()
-                    print(f"The result of {first_number} - {second_number} is: {result}")
+                    print(f"\nThe result of {first_number} - {second_number} is: {result}")
                 elif operation == "3":
                     result = calculator.multiplication()
-                    print(f"The result of {first_number} * {second_number} is: {result}")
+                    print(f"\nThe result of {first_number} * {second_number} is: {result}")
                 elif operation == "4":
                     result = calculator.division()
-                    print(f"The result of {first_number} / {second_number} is: {result}")
+                    print(f"\nThe result of {first_number} / {second_number} is: {result}")
                 elif operation == "5":
                     result = calculator.power()
-                    print(f"The result of {first_number} ** {second_number} is: {result}")
+                    print(f"\nThe result of {first_number} ** {second_number} is: {result}")
                 elif operation == "7":
                     result = calculator.remainder()
-                    print(f"The remainder of {first_number} / {second_number} is: {result}")
+                    print(f"\nThe remainder of {first_number} / {second_number} is: {result}")
                 elif operation == "8":
                     result = calculator.radical()
-                    print(f"The result of √{first_number} (with index {second_number}) is: {result}")
-                
+                    print(f"\nThe result of √{first_number} (with index {second_number}) is: {result}")
+
             elif operation == "10":
                     file_name = input("Enter the file name (with .txt extension only): ")
                     if not file_name.endswith(".txt"):
@@ -137,7 +137,7 @@ def run_calculator():
                     continue
                 calculator = PremiumCalculator(number, 0, operation)
                 result = calculator.square_root()
-                print(f"The square root of {number} is: {result}")
+                print(f"\nThe square root of {number} is: {result}")
 
             else:
                 print("Invalid choice. Please try again.")
