@@ -71,4 +71,5 @@ def run_calculator():
         else:
             print("Invalid choice. Please try again.")
 
-run_calculator()
+if __name__ == "__main__":
+    run_calculator()
