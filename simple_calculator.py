@@ -1,7 +1,7 @@
 from premuim_calculator import PremiumCalculator
 
 def math_problem_txt_reader(file_name):
-    with open("file_name", "r") as file, \
+    with open(file_name, "r") as file, \
         open("results.txt", "w") as results_file:
 
         for line in file:
@@ -79,7 +79,6 @@ def run_calculator():
 { "-" * 50 }
 Enter your choice (1-10): """)
         
-
         if operation == "9":
             print("Thank you for using me! Goodbye!")
             break
