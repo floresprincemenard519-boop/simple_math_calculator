@@ -5,10 +5,10 @@ class PremiumCalculator(Calculator):
     def power(self):
         return self.first_number ** self.second_number
 
-    def square_root(self, number):
-        if number < 0:
+    def square_root(self):
+        if self.first_number < 0:
             return "\nError: Square root of a negative number is not defined."
-        return number ** 0.5
+        return self.first_number ** 0.5
     
     def radical(self):
         if self.second_number == 0:

@@ -132,7 +132,7 @@ def run_calculator():
                 number = number_checker(input("Enter the number: "))
                 if number is None:
                     continue
-                calculator = PremiumCalculator(0, 0, operation)
+                calculator = PremiumCalculator(number, 0, operation)
                 result = calculator.square_root(number)
                 print(f"The square root of {number} is: {result}")
 
@@ -140,7 +140,7 @@ def run_calculator():
                 print("Invalid choice. Please try again.")
     except Exception as error:
         print(f"An error occurred: {error}")
-        
+
 if __name__ == "__main__":
     run_calculator()
 
