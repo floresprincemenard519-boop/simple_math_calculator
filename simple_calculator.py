@@ -54,6 +54,7 @@ def math_problem_txt_reader(file_name):
                     print(f"Unsupported operation number in line: {line}. Skipping.")
 
             print("Math problems processed. Results saved to results.txt.")
+
     except FileNotFoundError:
         print(f"File {file_name} not found. Please check the file name and try again.")
     except Exception as error:
@@ -91,11 +92,13 @@ def run_calculator():
 
             if operation in ["1", "2", "3", "4", "5", "7", "8"]:
                 first_number = number_checker(input("Enter the first number: "))
+
                 if first_number is None:
                     continue
                 second_number = number_checker(input("Enter the second number: "))
                 if second_number is None:
                     continue
+
                 calculator = PremiumCalculator(first_number, second_number, operation)
 
                 if operation == "1":
@@ -133,11 +136,12 @@ def run_calculator():
                 if number is None:
                     continue
                 calculator = PremiumCalculator(number, 0, operation)
-                result = calculator.square_root(number)
+                result = calculator.square_root()
                 print(f"The square root of {number} is: {result}")
 
             else:
                 print("Invalid choice. Please try again.")
+                
     except Exception as error:
         print(f"An error occurred: {error}")
 
