@@ -3,7 +3,7 @@ from premuim_calculator import PremiumCalculator
 def math_problem_txt_reader(file_name):
     with open("file_name", "r") as file, \
         open("results.txt", "w") as results_file:
-        
+
         for line in file:
             line = line.strip()
 
@@ -30,27 +30,27 @@ def math_problem_txt_reader(file_name):
 
             if operation.strip() == "1":
                 result = calculator.addition()
-                print(f"{first_number} + {second_number} = {result}")
+                results_file.write(f"{first_number} + {second_number} = {result}\n")
             elif operation.strip() == "2":
                 result = calculator.subtraction()
-                print(f"{first_number} - {second_number} = {result}")
+                results_file.write(f"{first_number} - {second_number} = {result}\n")
             elif operation.strip() == "3":
                 result = calculator.multiplication()
-                print(f"{first_number} * {second_number} = {result}")
+                results_file.write(f"{first_number} * {second_number} = {result}\n")
             elif operation.strip() == "4":
                 result = calculator.division()
-                print(f"{first_number} / {second_number} = {result}")
+                results_file.write(f"{first_number} / {second_number} = {result}\n")
             elif operation.strip() == "5":
                 result = calculator.power()
-                print(f"{first_number} ** {second_number} = {result}")
+                results_file.write(f"{first_number} ** {second_number} = {result}\n")
             elif operation.strip() == "7":
                 result = calculator.remainder()
-                print(f"{first_number} % {second_number} = {result}")
+                results_file.write(f"{first_number} % {second_number} = {result}\n")
             elif operation.strip() == "8":
                 result = calculator.radical(first_number, second_number)
-                print(f"√{first_number} (with index {second_number}) = {result}")
+                results_file.write(f"√{first_number} (with index {second_number}) = {result}\n")
             else:
-                print(f"Unsupported operation '{operation.strip()}' in line: {line}. Skipping.")
+                print(f"Unsupported operation number in line: {line}. Skipping.")
     # read file with format: first_number, second_number, operation
     # example: 5, 3, +
     # for each line, perform the operation and write the result to a new file called results.txt
