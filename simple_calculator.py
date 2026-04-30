@@ -77,14 +77,14 @@ def run_calculator():
     9. Exit
     10. Math problem txt reader (experimental)
 { "-" * 50 }
-Enter your choice (1-9): """)
+Enter your choice (1-10): """)
         
 
         if operation == "9":
             print("Thank you for using me! Goodbye!")
             break
 
-        if operation in ["1", "2", "3", "4", "5", "7", "8"]:
+        if operation in ["1", "2", "3", "4", "5", "7", "8", "10"]:
             first_number = number_checker(input("Enter the first number: "))
             if first_number is None:
                 continue
